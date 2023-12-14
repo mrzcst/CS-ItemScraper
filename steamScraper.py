@@ -10,7 +10,7 @@ while(pages < 10):
     pages = int(response.json()["total_count"]/100 + 1)
 
 results = []
-for page in range(1, pages):
+for page in range(1, pages + 1):
     start = 100 * (page - 1)
     print('Scraping page', page, 'out of', pages)
     

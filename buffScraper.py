@@ -39,7 +39,7 @@ get_pages = requests.request("GET", url, headers=headers, params=querystring)
 pages = int(get_pages.json()['data']['total_count']/80) + 1
 
 results = []
-for page in range(1, pages):
+for page in range(1, pages + 1):
     print('Scraping page', page, 'out of', pages)
 
     querystring = {"game":"csgo","page_num":f"{page}","page_size":"80"}
